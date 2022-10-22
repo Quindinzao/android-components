@@ -6,5 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/swHelloWorld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_cairo"
+        android:checked="true"
+        app:thumbTint="@color/purple_600"
+        app:trackTint="@color/purple_100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtHelloWorld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="ON"
+        android:fontFamily="@font/font_cairo"
+        app:layout_constraintEnd_toEndOf="@+id/swHelloWorld"
+        app:layout_constraintStart_toStartOf="@+id/swHelloWorld"
+        app:layout_constraintTop_toBottomOf="@+id/swHelloWorld" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
