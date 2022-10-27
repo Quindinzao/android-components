@@ -3,7 +3,9 @@ package com.quindinzao.components;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -14,12 +16,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ProgressBar progressBar = findViewById(R.id.progressBar);
         ToggleButton toggleButton = findViewById(R.id.toggleButton);
+
         toggleButton.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
-                Toast.makeText(this, getText(R.string.is_checked).toString(), Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.VISIBLE);
             } else {
-                Toast.makeText(this, getText(R.string.is_not_checked).toString(), Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.INVISIBLE);
             }
         });
     }
