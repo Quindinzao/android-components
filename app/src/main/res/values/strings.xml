@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Components</string>
+    <string name="username">Username</string>
+    <string name="showUsername">Show Username</string>
 </resources>
